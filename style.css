@@ -47,6 +47,7 @@ nav {
     grid-row: head;
     justify-self: center;
     align-self: end;
+    font-family: 'Charmonman', cursive;
 }
 
 nav ul {
