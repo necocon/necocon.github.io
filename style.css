@@ -105,7 +105,7 @@ p {
     grid-row: sub;
     text-align: center;
     align-self: end;
-    padding: 0 0 50px 0;
+    padding: 0 0 20px 0;
 }
 
 p a {
@@ -126,6 +126,14 @@ p a:hover {
 p img {
     width: 250px;
     /* vertical-align: baseline; */
+}
+
+.illustrator_icon {
+    width:18px;
+}
+
+.php_icon {
+    width:25px;
 }
 
 /* 記事一覧 */
@@ -154,7 +162,20 @@ section h2 {
     font-size: 16px;
     font-weight: normal;
     text-align: center;
+    padding: 20px;
 
+}
+
+article {
+    justify-self: center;
+    align-self: center;
+    text-align: center;
+    font-size: 14px;
+    margin: 20px;
+}
+
+article img {
+    width: 300px;
 }
 
 /* フッター */
@@ -182,7 +203,7 @@ body::after {
         grid-column-gap: 5%;
         column-gap: 5%;
         grid-template-rows:
-            [head] auto [menu] auto [title sub] auto [recent] auto [foot] 250px;
+            [head] auto [menu] auto [title sub] auto [recent] auto [foot] 100px;
     }
 
     /* PC版：ヒーローイメージ */
@@ -194,7 +215,6 @@ body::after {
     /* PC版：タイトル */
     h1 {
         grid-column: 1 / -1;
-        max-width: 460px;
         justify-self: center;
         align-self: start;
         padding: 50px;
@@ -204,7 +224,7 @@ body::after {
     p {
         grid-column: 1 / -1;
         align-self: end;
-        padding: 50px;
+        padding: 20px;
     }
 
     /* PC版：ヘッダー */
