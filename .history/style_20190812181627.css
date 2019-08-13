@@ -15,7 +15,7 @@ img {
 .necoco_logo {
     width: 220px;
     height: 220px;
-    padding: 10px 0 0 0;
+    padding: 20px 20px;
 }
 
 /* ページ全体の設定 */
@@ -23,7 +23,7 @@ body {
     display: grid;
     grid-template-columns: 20px 1fr 20px;
     grid-template-rows:
-        [head] auto [menu] auto [title] auto [sub] auto [recent] auto [foot] 100px;
+        [head] auto [title] auto [sub] auto [recent] auto [foot] 100px;
     grid-row-gap: 20px;
     row-gap: 20px;
     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
@@ -44,7 +44,7 @@ header {
 
 /* ナビゲーションメニュー */
 nav {
-    grid-row: menu;
+    grid-row: head;
     justify-self: center;
     align-self: end;
     font-family: 'Charmonman', cursive;
@@ -173,57 +173,11 @@ body::after {
     z-index: -1;
 }
 
-/* ===== PC版の設定 ===== */
-@media (min-width: 768px) {
-
-    /* PC版：ページ全体の設定 */
-    body {
-        grid-template-columns: 0.2fr repeat(6, 1fr) 0.2fr;
-        grid-column-gap: 5%;
-        column-gap: 5%;
-        grid-template-rows:
-            [head] auto [menu] auto [title sub] auto [recent] auto [foot] 250px;
-    }
-
-    /* PC版：ヒーローイメージ */
-    figure.hero {
-        grid-row: title;
-        margin-top: -20px;
-    }
-
-    /* PC版：タイトル */
-    h1 {
-        grid-column: 1 / -1;
-        max-width: 460px;
-        justify-self: center;
-        align-self: start;
-        padding: 50px;
-    }
-
-    /* PC版：サブタイトル */
-    p {
-        grid-column: 1 / -1;
-        align-self: end;
-        padding: 50px;
-    }
-
-    /* PC版：ヘッダー */
-    header {
-        grid-row: head;
-        justify-self: center;
-    }
-
-    /* PC版：ナビゲーションメニュー */
-    nav {
-        grid-row: menu;
-        justify-self: center;
-        padding: 0 0 20px 0;
-    }
-
-    /* PC版：記事一覧 */
-    section {
-        grid-template-columns: repeat(1, 1fr);
-    }
+/* PC版: ページ全体の設定 */
+body {
+    grid-template-columns: 0.2fr repeat(6, 1fr) 0.2fr;
+    grid-column-gap: 5%;
+    column-gap: 5%;
+    grid-template-rows:
+        [head] 220px [title sub] auto [recent] auto [foot] 100px;
 }
-/* ===== PC版の設定ここまで ===== */
-
