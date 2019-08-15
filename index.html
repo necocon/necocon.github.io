@@ -11,6 +11,45 @@
 
         gtag('config', 'UA-145521787-1');
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+        jQuery(function () {
+            var pagetop = $('#page_top');
+            pagetop.hide();
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 100) {  //100pxスクロールしたら表示
+                    pagetop.fadeIn();
+                } else {
+                    pagetop.fadeOut();
+                }
+            });
+            pagetop.click(function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500); //0.5秒かけてトップへ移動
+                return false;
+            });
+        });
+    </script>
+    <script>
+        var jsevents ={};
+        $(document).ready(function () {
+            jsevents.fadeTotop();
+        });
+
+        jsevents.fadeTotop = function () {
+            var topBtn = $('#page_top');
+            topBtn.hide();
+            //スクロールが200に達したらボタン表示
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 200) {
+                    topBtn.fadeIn();
+                } else {
+                    topBtn.fadeOut();
+                }
+            });
+        }
+    </script>
 
     <meta charset="UTF-8">
     <title>necoco design</title>
@@ -19,7 +58,9 @@
     <meta name="viewport" content="width=device-width">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.4/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Charmonman&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -39,14 +80,10 @@
     </figure>
 
     <h1>necoco design.</h1>
-    <p>
-        <!-- <img src="img/circle.svg" alt=""><br> -->
-        <a href="#">More</a>
-    </p>
 
     <section>
-        <article>
-                <h2>About</h2>
+        <article id="about">
+            <h2><a id="about">About</a></h2>
             <p>
                 好き：猫 / 美味しいもの / 写真 / 音楽<br>
                 音楽：The 1975 / サカナクション<br>
@@ -54,15 +91,14 @@
             </p>
         </article>
         <article>
-                <figure><img src="img/img/02.jpg" alt=""></figure>
-                <h2>Skill</h2>
+            <h2><a id="skill">Skill</a></h2>
             <p>
                 HTML / CSS / PHP<br>
                 Illustrator / Photoshop
             </p>
         </article>
         <article>
-                <h2>Works</h2>
+            <h2><a id="works">Works</a></h2>
             <p>
                 名刺デザイン&nbsp;<img class="illustrator_icon" src="img/ai.png"><br>
                 <img src="https://placehold.jp/300x200.png" alt="名刺の画像表">
@@ -73,15 +109,18 @@
                 ToDoList&nbsp;<img class="php_icon" src="img/php-med-trans.png"><br>
                 <img src="https://placehold.jp/300x200.png" alt="ToDoListの画像">
             </p>
+            <a class="button button01" href="works.html">MORE</a></p>
 
         </article>
         <article>
-                <h2>Contact</h2>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeUccPwiZc-0DJg64H3mpqpBMmXiVDM8I3ch6V1tfSoa4j5zw/viewform?usp=sf_link">お問い合わせはこちら</a>
+            <h2><a id="contact">Contact</a></h2>
+            <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSeUccPwiZc-0DJg64H3mpqpBMmXiVDM8I3ch6V1tfSoa4j5zw/viewform?usp=sf_link">お問い合わせはこちら</a>
         </article>
     </section>
 
-    <footer>© necoco</footer>
+    <div id="page_top"><a href="#"></a></div>
+    <footer>©2019 necoco</footer>
 
 </body>
 
