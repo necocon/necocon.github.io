@@ -26,7 +26,8 @@ body {
         [head] auto [menu] auto [title] auto [sub] auto [recent] auto [foot] 100px;
     grid-row-gap: 20px;
     row-gap: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    /* font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif; */
+    font-family: 'Sawarabi Mincho', sans-serif;
 }
 
 /* パーツの配置 */
@@ -60,7 +61,7 @@ nav ul {
 }
 
 nav li {
-    padding: 0px 15px 0px 20px;
+    padding: 0px 15px 0px 15px;
 }
 
 nav a {
@@ -72,6 +73,10 @@ nav a {
 
 nav a:hover {
     color: #f786c2;
+}
+
+a:hover {
+    color: #f786c2; 
 }
 
 /* ヒーローイメージ */
@@ -100,8 +105,10 @@ h1 {
     color: #fefefe;
     font-size: 28px;
     font-weight: normal;
+    font-family: 'Charmonman', cursive;
     line-height: 1.2;
     text-shadow: 0 0 5px #444444;
+    padding: 70px 0 0 0;
 }
 
 /* サブタイル */
@@ -110,6 +117,7 @@ p {
     text-align: center;
     align-self: end;
     padding: 0 0 20px 0;
+    font-family: 'Sawarabi Mincho', sans-serif;
 }
 
 p a {
@@ -162,11 +170,11 @@ section a:hover {
 
 section h2 {
     grid-column: 1 / -1;
-    /* font-family: '', ; */
+    font-family: 'Charmonman', cursive;
     font-size: 16px;
     font-weight: normal;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0 10px 0;
 
 }
 
