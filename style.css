@@ -27,7 +27,8 @@ body {
     grid-row-gap: 20px;
     row-gap: 20px;
     /* font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif; */
-    font-family: 'Sawarabi Mincho', sans-serif;
+    /* font-family: 'Sawarabi Mincho', sans-serif; */
+     font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Yu Gothic", YuGothic, Verdana, Meiryo, "M+ 1p", sans-serif;
 }
 
 /* パーツの配置 */
@@ -117,7 +118,6 @@ p {
     text-align: center;
     align-self: end;
     padding: 0 0 20px 0;
-    font-family: 'Sawarabi Mincho', sans-serif;
 }
 
 p a {
