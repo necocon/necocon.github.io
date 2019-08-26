@@ -1,2 +1,216 @@
-別のページだよ～
-まだ作ってないよ～
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-145521787-1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-145521787-1");
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"
+    >
+      jQuery(function () {
+          var pagetop = $('#page_top');
+          pagetop.hide();
+          $(window).scroll(function () {
+              if ($(this).scrollTop() > 100) {  //100pxスクロールしたら表示
+                  pagetop.fadeIn();
+              } else {
+                  pagetop.fadeOut();
+              }
+          });
+          pagetop.click(function () {
+              $('body,html').animate({
+                  scrollTop: 0
+              }, 500); //0.5秒かけてトップへ移動
+              return false;
+          });
+      });
+    </script>
+    <script>
+      var jsevents = {};
+      $(document).ready(function() {
+        jsevents.fadeTotop();
+      });
+
+      jsevents.fadeTotop = function() {
+        var topBtn = $("#page_top");
+        topBtn.hide();
+        $(window).scroll(function() {
+          if ($(this).scrollTop() > 200) {
+            topBtn.fadeIn();
+          } else {
+            topBtn.fadeOut();
+          }
+        });
+      };
+    </script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"
+      type="text/javascript"
+    ></script>
+
+    <meta charset="UTF-8" />
+    <title>necoco design</title>
+
+    <meta name="robots" content="noindex" />
+    <meta name="viewport" content="width=device-width" />
+
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.4/css/all.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Charmonman&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Sawarabi+Mincho&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./luminous-basic.min.css" />
+  </head>
+
+  <body class="works">
+    <header>
+      <img
+        src="img/necoco_logo500c.png"
+        class="necoco_logo"
+        alt="necoco_designのlogo"
+      />
+    </header>
+    <nav>
+      <ul>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#skill">Skill</a></li>
+        <li><a href="#works">Works</a></li>
+        <li>
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLSeUccPwiZc-0DJg64H3mpqpBMmXiVDM8I3ch6V1tfSoa4j5zw/viewform?usp=sf_link"
+            >Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <section>
+      <!-- <h1 id="works_h1">制作物のご紹介</h1> -->
+      <article>
+        <p>
+          名刺デザイン&nbsp;<img
+            class="illustrator_icon"
+            src="img/ai.png"
+          /><br />
+          <a
+            class="card_box"
+            href="img/necoco_名刺_表.png"
+            data-lightbox="card_box"
+            data-title="necoco名刺の表面"
+            ><img src="img/necoco_名刺_表.png" alt="necoco名刺の表面"
+          /></a>
+          <a
+            class="card_box"
+            href="img/necoco_名刺_裏.png"
+            data-lightbox="card_box"
+            data-title="necoco名刺の裏面"
+            ><img src="img/necoco_名刺_裏.png" alt="necoco名刺の裏面"
+          /></a>
+          <br>
+          <div class="works_font">
+          Illustratorで制作<br>
+          猫好きなこと、各種アイコンでアカウント名のみを表示することでシンプルでスッキリした見やすさを意識して作りました。<br>
+          裏面はバーコードを読み込ませることでSNSへ簡単にアクセスできるようにしています。  
+        </div>
+        </p>
+        <p>
+          ロゴデザイン&nbsp;<img
+            class="illustrator_icon"
+            src="img/ai.png"
+          /><br />
+          <a
+            href="img/works_logo01.png"
+            data-lightbox="necoco_logo"
+            data-title="necocoシンプルロゴ"
+            ><img
+              class="logo"
+              src="img/works_logo01.png"
+              alt="necocoシンプルロゴ"
+          /></a>
+          <a
+            href="img/works_logo04.png"
+            data-lightbox="necoco_logo"
+            data-title="necoco飾り枠つきロゴ"
+            ><img
+              class="logo"
+              src="img/works_logo04.png"
+              alt="necoco飾り枠つきロゴ"
+          /></a>
+          <div class="works_font">
+            Illustratorで制作<br>
+            猫好きなこと、シンプルでスッキリと見やすいを意識してロゴを作りました。<br>
+            Webサイトで使うために華やかさを意識してロゴを作りました。  
+          </div>
+        </p>
+        <p>
+          ToDoList&nbsp;<img
+            class="php_icon"
+            src="img/php-med-trans.png"
+          /><br />
+          <a
+            href="img/todolist.jpg"
+            data-lightbox="todolsit"
+            data-title="todolist"
+            ><img class="todolist" src="img/todolist.jpg" alt="ToDoList"
+          /></a>
+          <div class="works_font">
+            HTML,CSS,PHPで制作<br>
+            PHPを用いてへデーターを生成、読み取り、更新、削除できるようになるのを目的に作りました。<br>
+            簡易的なToDoListです。
+          </div>
+        </p>
+        <p>
+          100DaysOfRecord&nbsp;<img
+            class="php_icon"
+            src="img/php-med-trans.png"
+          /><br />
+          <a
+            href="img/100daysofrecord.jpg"
+            data-lightbox="100daysofrecord"
+            data-title="100daysofrecord"
+            ><img class="100daysofrecord" src="img/100daysofrecord.jpg" alt="100daysofrecord"
+          /></a>          
+          <!-- <img
+            class="ChromeExpansion"
+            src="img/100daysofrecord.jpg"
+            alt="100DaysOfRecordの画像"
+          /> -->
+          <div class="works_font">
+            HTML,CSS,JavaScriptで制作<br>
+            GoogleChromeの拡張機能です。<br>
+            こちらは、プログラミングの先輩と共同作業でフォローしてもらいながら作りました。<br>
+            Twitterで流行っている100DaysOfCodeの日数計算やハッシュタグ生成をサポートする目的で作りました。
+          </div>
+        </p>
+      </article>
+    </section>
+    <div id="page_top"><a href="#"></a></div>
+    <footer>©2019 necoco</footer>
+  </body>
+</html>
